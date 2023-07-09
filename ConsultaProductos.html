@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>www.nuestra.co</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="estilos_productos_API.css">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+
+    <header class="cabecera"> 
+
+      <img class="logo" src = "imagenes/logo.png" ></img>
+
+    </header>
+
+    <div class="topnav" id="myTopnav">
+      <a class="active">Elige tu nuevo mejor amigo según su raza: </a>
+      <a onclick="mostrarProductos(this)" value="african">African</a>
+      <a onclick="mostrarProductos(this)" value="beagle">Beagle</a>
+      <a onclick="mostrarProductos(this)" value="chihuahua">Chihuahua</a>
+      <a onclick="mostrarProductos(this)" value="dingo">Dingo</a>
+      <a onclick="mostrarProductos(this)" value="husky">Husky</a>
+      <a onclick="mostrarProductos(this)" value="labrador">Labrador</a>
+      <a onclick="mostrarProductos(this)" value="pitbull">Pitbull</a>
+      <a onclick="mostrarProductos(this)" value="pug">Pug</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+    <div id="contenedor_imagenes" class="grid grid-cols-4 gap-4 place-content-stretch w-full p-8"></div>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
+
+</html>
